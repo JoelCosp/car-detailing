@@ -94,6 +94,10 @@ button,input,textarea{font:inherit}
 .btn.sm{padding: 10px 14px; font-size: 14px}
 .btn.wide{width:100%}
 
+.snd-btn{
+    color: #EAF2FFFA;
+}
+
 .icon-btn{
   width:44px;height:44px;border-radius:12px;
   border:1px solid var(--line2);

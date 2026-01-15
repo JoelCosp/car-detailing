@@ -1,0 +1,155 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weslime Car Detailing</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo">WESLIME</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button class="btn primary">Book Now</button>
+    </nav>
+    <div class="burger">☰</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Premium<br>Car Detailing</h1>
+      <p>Professional interior & exterior detailing. Shine, protection and perfection.</p>
+      <div class="hero-actions">
+        <button class="btn primary">Book Service</button>
+        <button class="btn ghost">Our Services</button>
+      </div>
+    </div>
+    <div class="hero-car">
+        <img src="img/hero.webp"
+            alt="Professional car detailing service"
+            width="1600"
+            height="900"
+            fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="cards">
+  <div class="container card-grid">
+    <div class="card">
+      <span>01</span>
+      <h3>Exterior Detail</h3>
+      <p>Deep wash, polish and paint enhancement</p>
+    </div>
+    <div class="card">
+      <span>02</span>
+      <h3>Interior Detail</h3>
+      <p>Seats, carpets, leather and odor removal</p>
+    </div>
+    <div class="card">
+      <span>03</span>
+      <h3>Ceramic Coating</h3>
+      <p>Long-term paint protection & gloss</p>
+    </div>
+    <div class="card">
+      <span>04</span>
+      <h3>Paint Protection</h3>
+      <p>Wax, sealants and premium finishes</p>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="container split-grid">
+    <div class="split-img engine">
+        <img
+            src="img/detailing.webp"
+            alt="Professional car detailing interior and exterior"
+            width="1200"
+            height="800"
+            loading="lazy">
+    </div>
+    <div class="split-text">
+      <h2>Detailing that transforms<br>your vehicle completely.</h2>
+      <p>High-end products, precision tools and expert hands for flawless results.</p>
+      <a href="#">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<section class="split reverse">
+  <div class="container split-grid">
+    <div class="split-img wheel">
+        <img
+            src="img/protection.webp"
+            alt="Car paint protection and ceramic coating"
+            width="1200"
+            height="800"
+            loading="lazy">
+    </div>
+    <div class="split-text">
+      <h2>Protection focused<br>on durability and shine.</h2>
+      <p>We preserve your vehicle’s value with premium detailing solutions.</p>
+      <div class="hero-actions">
+        <button class="btn ghost">Coatings</button>
+        <button class="btn ghost">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Send us a message or call us directly.</p>
+      <p><strong>Phone:</strong> 777 777 777</p>
+      <p><strong>Phone:</strong> 777 777 777</p>
+    </div>
+    <form class="contact-form" action="https://formsubmit.co/3ffa04fefe004a4617f8f2654c501484" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Contacto web - %email%">
+
+        <button class="btn primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Company</h4>
+      <p>About Us</p>
+      <p>Our Team</p>
+      <p>Gallery</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p>Detailing</p>
+      <p>Ceramic Coating</p>
+      <p>Protection</p>
+    </div>
+    <div>
+      <h4>Subscribe</h4>
+      <input type="email" placeholder="Email">
+      <button class="btn primary">Send</button>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

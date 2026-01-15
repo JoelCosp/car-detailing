@@ -1,0 +1,299 @@
+/* style.css */
+:root {
+  --bg:#0b0e13;
+  --panel:#121722;
+  --blue:#1e8bff;
+  --text:#ffffff;
+  --muted:#9aa3b2;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family:'Segoe UI', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+.container {
+  width:min(1200px, 90%);
+  margin:auto;
+}
+
+.header {
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:100;
+  background:rgba(11,14,19,.7);
+  backdrop-filter:blur(12px);
+}
+
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 0;
+}
+
+.menu a {
+  margin:0 15px;
+  text-decoration:none;
+  color:var(--muted);
+  transition:.3s;
+}
+
+.menu a:hover { color:#fff; }
+
+.logo {
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.burger {
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.btn {
+  padding:12px 26px;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.4s;
+}
+
+.primary {
+  background:var(--blue);
+  border:none;
+  color:#fff;
+}
+
+.primary:hover {
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(30,139,255,.5);
+}
+
+.ghost {
+  background:transparent;
+  border:1px solid #444;
+  color:#fff;
+}
+
+.hero {
+  padding:160px 0 100px;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.hero-text h1 {
+  font-size:clamp(40px,6vw,64px);
+  line-height:1.1;
+  animation:fadeUp 1s ease forwards;
+}
+
+.hero-text p {
+  margin:20px 0 30px;
+  color:var(--muted);
+  animation:fadeUp 1.3s ease forwards;
+}
+
+.hero-actions {
+  display:flex;
+  gap:20px;
+}
+
+.hero-car {
+  height:380px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#222,#555);
+  animation:float 6s ease-in-out infinite;
+}
+
+.cards {
+  padding:80px 0;
+}
+
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.card {
+  background:var(--panel);
+  padding:30px;
+  border-radius:20px;
+  transition:.5s;
+  position:relative;
+  animation:fadeUp .8s ease forwards;
+}
+
+.card span {
+  position:absolute;
+  top:20px;
+  right:20px;
+  opacity:.1;
+  font-size:48px;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.5);
+}
+
+.split {
+  padding:100px 0;
+}
+
+.split-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.split.reverse .split-grid { direction:rtl; }
+.split.reverse .split-text { direction:ltr; }
+
+.split-img {
+  height:320px;
+  border-radius:24px;
+  background:#2a2f3a;
+  animation:fadeUp .8s ease forwards;
+}
+
+.engine { background:linear-gradient(135deg,#333,#555); }
+.wheel { background:linear-gradient(135deg,#222,#444); }
+
+.split-text h2 {
+  font-size:clamp(28px,4vw,42px);
+}
+
+.split-text p {
+  margin:20px 0;
+  color:var(--muted);
+}
+
+.contact {
+  padding:100px 0;
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:none;
+}
+
+.footer {
+  background:#080a0f;
+  padding:80px 0;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.footer input {
+  width:100%;
+  padding:12px;
+  margin:15px 0;
+  border-radius:6px;
+  border:none;
+}
+
+.menu.open {
+  display:flex;
+  position:absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  background:rgba(11,14,19,.95);
+  backdrop-filter:blur(12px);
+  flex-direction:column;
+  padding:30px 0;
+}
+
+.menu.open a,
+.menu.open button {
+  margin:10px 0;
+}
+
+/* HERO IMG */
+
+.hero-car {
+  overflow: hidden;
+}
+
+.hero-car img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.split-img {
+  overflow: hidden;
+}
+
+.split-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+
+
+input, button, textarea { font-size:16px; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(40px); }
+  to { opacity:1; transform:none; }
+}
+
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-20px); }
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .hero-grid,
+  .split-grid,
+  .contact-grid {
+    grid-template-columns:1fr;
+  }
+  .card-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+  .menu { display:none; }
+  .burger { display:block; }
+}
+
+@media(max-width:500px) {
+  .card-grid { grid-template-columns:1fr; }
+}

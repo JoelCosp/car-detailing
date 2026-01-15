@@ -1,155 +1,406 @@
 <!-- index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weslime Car Detailing</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1118" />
+  <title>Wesliime Auto Repair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-aurora" aria-hidden="true"></div>
 
-<header class="header">
-  <div class="container nav">
-    <div class="logo">WESLIME</div>
-    <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <button class="btn primary">Book Now</button>
-    </nav>
-    <div class="burger">☰</div>
-  </div>
-</header>
+  <!-- NAV -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="mark-ring"></span>
+          <span class="mark-dot"></span>
+        </span>
+        <span class="brand-text">EpiTech</span>
+      </a>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1>Premium<br>Car Detailing</h1>
-      <p>Professional interior & exterior detailing. Shine, protection and perfection.</p>
-      <div class="hero-actions">
-        <button class="btn primary">Book Service</button>
-        <button class="btn ghost">Our Services</button>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#home" class="nav-link is-active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn ghost" href="#contact">Get in touch</a>
+        <button class="icon-btn burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <div class="hero-car">
-        <img src="img/hero.webp"
-            alt="Professional car detailing service"
-            width="1600"
-            height="900"
-            fetchpriority="high">
-    </div>
-  </div>
-</section>
 
-<section class="cards">
-  <div class="container card-grid">
-    <div class="card">
-      <span>01</span>
-      <h3>Exterior Detail</h3>
-      <p>Deep wash, polish and paint enhancement</p>
-    </div>
-    <div class="card">
-      <span>02</span>
-      <h3>Interior Detail</h3>
-      <p>Seats, carpets, leather and odor removal</p>
-    </div>
-    <div class="card">
-      <span>03</span>
-      <h3>Ceramic Coating</h3>
-      <p>Long-term paint protection & gloss</p>
-    </div>
-    <div class="card">
-      <span>04</span>
-      <h3>Paint Protection</h3>
-      <p>Wax, sealants and premium finishes</p>
-    </div>
-  </div>
-</section>
-
-<section class="split">
-  <div class="container split-grid">
-    <div class="split-img engine">
-        <img
-            src="img/detailing.webp"
-            alt="Professional car detailing interior and exterior"
-            width="1200"
-            height="800"
-            loading="lazy">
-    </div>
-    <div class="split-text">
-      <h2>Detailing that transforms<br>your vehicle completely.</h2>
-      <p>High-end products, precision tools and expert hands for flawless results.</p>
-      <a href="#">Learn More →</a>
-    </div>
-  </div>
-</section>
-
-<section class="split reverse">
-  <div class="container split-grid">
-    <div class="split-img wheel">
-        <img
-            src="img/protection.webp"
-            alt="Car paint protection and ceramic coating"
-            width="1200"
-            height="800"
-            loading="lazy">
-    </div>
-    <div class="split-text">
-      <h2>Protection focused<br>on durability and shine.</h2>
-      <p>We preserve your vehicle’s value with premium detailing solutions.</p>
-      <div class="hero-actions">
-        <button class="btn ghost">Coatings</button>
-        <button class="btn ghost">Contact Us</button>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="container mobile-inner">
+        <a href="#home" class="m-link">Home</a>
+        <a href="#services" class="m-link">Services</a>
+        <a href="#projects" class="m-link">Projects</a>
+        <a href="#reviews" class="m-link">Reviews</a>
+        <a href="#contact" class="m-link">Contact</a>
+        <div class="m-cta">
+          <a class="btn primary" href="#contact">Book now</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="contact">
-  <div class="container contact-grid">
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p>Send us a message or call us directly.</p>
-      <p><strong>Phone:</strong> 777 777 777</p>
-      <p><strong>Phone:</strong> 777 777 777</p>
-    </div>
-    <form class="contact-form" action="https://formsubmit.co/3ffa04fefe004a4617f8f2654c501484" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <!-- Cambia estas rutas por tus imágenes -->
+        <img class="hero-img" src="images/hero-car.jpg" alt="" />
+        <div class="hero-overlay"></div>
+        <div class="hero-glow"></div>
+      </div>
 
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Contacto web - %email%">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Auto • Repair • Detailing</p>
+          <h1>Wesliime For<br/>Auto Repair</h1>
+          <p class="lead">
+            Servicio premium con diagnósticos precisos, tiempos claros y una experiencia cuidada.
+            Calidad de taller, atención de boutique.
+          </p>
 
-        <button class="btn primary" type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+          <div class="hero-cta">
+            <a class="btn primary" href="#services">Get a service</a>
+            <a class="btn ghost" href="#projects">Online assistance</a>
+          </div>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>Company</h4>
-      <p>About Us</p>
-      <p>Our Team</p>
-      <p>Gallery</p>
-    </div>
-    <div>
-      <h4>Services</h4>
-      <p>Detailing</p>
-      <p>Ceramic Coating</p>
-      <p>Protection</p>
-    </div>
-    <div>
-      <h4>Subscribe</h4>
-      <input type="email" placeholder="Email">
-      <button class="btn primary">Send</button>
-    </div>
-  </div>
-</footer>
+          <div class="hero-stats">
+            <div class="stat card-mini">
+              <div class="stat-top">
+                <span class="dot"></span>
+                <span>Trusted</span>
+              </div>
+              <strong>4.9/5</strong>
+              <small>Customer rating</small>
+            </div>
+            <div class="stat card-mini">
+              <div class="stat-top">
+                <span class="dot dot2"></span>
+                <span>Fast</span>
+              </div>
+              <strong>24h</strong>
+              <small>Turnaround*</small>
+            </div>
+            <div class="stat card-mini">
+              <div class="stat-top">
+                <span class="dot dot3"></span>
+                <span>Warranty</span>
+              </div>
+              <strong>12 mo</strong>
+              <small>On parts & labor</small>
+            </div>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="hero-side reveal">
+          <div class="glass-card">
+            <div class="glass-head">
+              <span class="pill">Open</span>
+              <span class="muted">Mon–Sat • 9:00–19:00</span>
+            </div>
+            <div class="glass-body">
+              <div class="line">
+                <span class="k">Phone</span>
+                <span class="v">+34 600 000 000</span>
+              </div>
+              <div class="line">
+                <span class="k">Location</span>
+                <span class="v">Barcelona, ES</span>
+              </div>
+              <div class="line">
+                <span class="k">Email</span>
+                <span class="v">hello@epitech.com</span>
+              </div>
+
+              <a class="btn primary wide" href="#contact">Request quote</a>
+              <p class="tiny muted">*Depende del trabajo y disponibilidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / CARDS -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Join to level and repair where</h2>
+          <p class="muted">Paquetes de servicio diseñados para rendimiento, seguridad y estética.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="service-card reveal">
+            <div class="card-media">
+              <img src="images/service-1.jpg" alt="Diagnóstico y motor" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3>Running Care</h3>
+              <p class="muted">Inspección completa, lectura OBD, fluidos y checklist.</p>
+              <a class="btn ghost sm" href="#contact">Schedule</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-media">
+              <img src="images/service-2.jpg" alt="Carrocería" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3>Formline Safety</h3>
+              <p class="muted">Frenos, suspensión, alineación y pruebas de seguridad.</p>
+              <a class="btn ghost sm" href="#contact">Book now</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-media">
+              <img src="images/service-3.jpg" alt="Trabajo en llanta" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3>Engineering Band</h3>
+              <p class="muted">Neumáticos, balanceo, sensores y calibración.</p>
+              <a class="btn ghost sm" href="#contact">Get quote</a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="card-media">
+              <img src="images/service-4.jpg" alt="Auto deportivo" />
+              <div class="media-overlay"></div>
+            </div>
+            <div class="card-body">
+              <h3>Fashioning</h3>
+              <p class="muted">Detailing premium: pulido, cerámico y protección.</p>
+              <a class="btn ghost sm" href="#contact">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / FEATURED (alternating blocks like the screenshots) -->
+    <section class="section soft" id="projects">
+      <div class="container">
+        <div class="split-head reveal">
+          <div>
+            <h2>Not car repair Auto report for which<br/>and that theyo? gudre.</h2>
+            <p class="muted">
+              Proceso claro y trazable: diagnóstico → presupuesto → ejecución → entrega.
+              Todo con fotos y actualizaciones.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-media">
+              <img src="images/feature-1.jpg" alt="Revisión motor" />
+            </div>
+            <div class="feature-content">
+              <p class="tag">Auto service</p>
+              <h3>Aut Aors elc for ecplaine in that<br/>CarConner repair & Fixur</h3>
+              <p class="muted">
+                Reparamos con criterio: piezas OEM/primeras marcas, torque specs, pruebas finales
+                y garantía por escrito.
+              </p>
+              <a class="text-link" href="#contact">
+                <span>Learn more</span>
+                <i aria-hidden="true">→</i>
+              </a>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-media">
+              <img src="images/feature-2.jpg" alt="Trabajo de carrocería" />
+            </div>
+            <div class="feature-content">
+              <p class="tag">Auto service</p>
+              <h3>Conversion Band out fot<br/>Testimonials, and for inent</h3>
+              <p class="muted">
+                Detailing y restauración estética con iluminación controlada, acabados finos y
+                protección real para el día a día.
+              </p>
+              <div class="feature-actions">
+                <a class="btn ghost sm" href="#reviews">Read reviews</a>
+                <a class="btn primary sm" href="#contact">Start project</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Customer Reviews</h2>
+          <p class="muted">Feedback real. Experiencia premium de principio a fin.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review reveal">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <strong>Alex M.</strong>
+                <p class="muted tiny">Brake + alignment</p>
+              </div>
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="muted">
+              Me explicaron todo con fotos, presupuesto sin sorpresas y el coche quedó perfecto.
+              Se nota el cuidado en cada detalle.
+            </p>
+          </article>
+
+          <article class="review reveal">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <strong>Daniela R.</strong>
+                <p class="muted tiny">Ceramic coating</p>
+              </div>
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="muted">
+              Acabado brutal. La pintura parece nueva y la atención fue súper profesional.
+              Repetiré seguro.
+            </p>
+          </article>
+
+          <article class="review reveal">
+            <div class="review-top">
+              <div class="avatar" aria-hidden="true"></div>
+              <div>
+                <strong>Jorge L.</strong>
+                <p class="muted tiny">Diagnosis</p>
+              </div>
+              <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            </div>
+            <p class="muted">
+              Detectaron el fallo rápido y me dieron opciones. Transparencia total y entrega a tiempo.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (added) -->
+    <section class="section soft" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <h2>Contact</h2>
+            <p class="muted">
+              Cuéntanos qué necesitas. Respuesta rápida con una propuesta clara.
+            </p>
+
+            <div class="contact-cards">
+              <div class="info-card">
+                <p class="muted tiny">Email</p>
+                <p class="info">hello@epitech.com</p>
+              </div>
+              <div class="info-card">
+                <p class="muted tiny">Phone</p>
+                <p class="info">+34 600 000 000</p>
+              </div>
+              <div class="info-card">
+                <p class="muted tiny">Workshop</p>
+                <p class="info">Barcelona, ES</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" action="https://formsubmit.co/3ffa04fefe004a4617f8f2654c501484" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Contacto web - %email%">
+
+              <button class="btn primary" type="submit">Send Message</button>
+            </form>
+
+            <p class="tiny muted form-note">
+              Al enviar aceptas que te contactemos para responder tu consulta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="foot-col">
+          <div class="brand foot-brand">
+            <span class="brand-mark" aria-hidden="true">
+              <span class="mark-ring"></span>
+              <span class="mark-dot"></span>
+            </span>
+            <span class="brand-text">EpiTech</span>
+          </div>
+          <p class="muted">
+            Auto care premium con foco en rendimiento, estética y experiencia.
+          </p>
+        </div>
+
+        <div class="foot-col">
+          <h4>Features</h4>
+          <a href="#services">Service</a>
+          <a href="#projects">Projects</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#top">Home</a>
+          <a href="#contact">Contact</a>
+          <a href="#services">Services</a>
+        </div>
+
+        <div class="foot-col">
+          <h4>Common land</h4>
+          <p class="muted tiny">
+            Horarios, ubicación, garantías y preguntas frecuentes.
+          </p>
+
+          <form class="newsletter" action="#" method="post" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email" />
+            <button class="btn primary sm" type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container foot-bottom">
+        <p class="tiny muted">© <span id="year"></span> EpiTech. All rights reserved.</p>
+        <a class="tiny muted to-top" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
